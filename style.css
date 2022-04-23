@@ -1,0 +1,91 @@
+/* General CSS */
+body{
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    border: none;
+}
+/* layout */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+#header{
+    border-bottom: solid 1px black;
+}
+#header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo{
+flex-basis: 110px;
+}
+
+.main-navigation{
+    flex-basis: 100%;
+    
+}
+
+.main-navigation ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.main-navigation .menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navigation li{
+    line-height: 50px;
+    position: relative;
+}
+.main-navigation a{
+    text-decoration: none;
+    color: #000;
+}
+.main-navigation .menu > li >a{
+    text-transform: uppercase;
+    padding: 15px 20px;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus{
+    color: #777;
+}
+.main-navigation svg{
+    width: 12px;
+
+}
+.main-navigation .sub-menu-toggle{
+    margin-left: 5px;
+    top: 4px;
+    position: relative;
+
+}
+.main-navigation .sub-menu{
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    z-index: 9;
+    box-shadow: 6px 6px 12px 0px rgb(0 0 0 / 50%);
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.main-navigation li:hover .sub-menu{
+    display: block;
+}
+.main-navigation .sub-menu li{
+    padding: 10px 0;
+    line-height: 15px;
+}
+.main-navigation .sub-menu li a{
+    padding-left: 20px;
+}
