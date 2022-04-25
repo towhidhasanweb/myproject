@@ -89,3 +89,10 @@ flex-basis: 110px;
 .main-navigation .sub-menu li a{
     padding-left: 20px;
 }
+
+#home-top{
+    background-color: #000;
+    background-image: linear-gradient(to right, #000, #666);
+    padding: 12% 0;
+    text-align: center;
+}
