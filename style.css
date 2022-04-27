@@ -1,10 +1,13 @@
 /* General CSS */
 body{
     margin: 0;
+    padding: o;
+    font-family: 'Lato', sans-serif;
 }
 img{
     max-width: 100%;
     border: none;
+    vertical-align: middle;
 }
 /* layout */
 .container{
@@ -116,4 +119,32 @@ flex-basis: 110px;
 
 #home-top .cta:hover{
     color: #fff;
+}
+
+.section{
+    padding: 50px 0;
+    
+}
+.section h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2em;
+}
+/* about section */
+.section .container{
+    display: flex;
+    
+}
+.section .container .left-column, .section .container .right-column{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+#about .container{
+    column-gap: 30px;
+}
+.about-text p{
+    font-size: 16px;
+}
+#about .about-pic{
+    box-shadow: -10px 5px 10px #3a393970;
 }
