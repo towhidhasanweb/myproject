@@ -212,3 +212,13 @@ font-size: 14px;
     transform: scale(1.1);
 
 }
+#blog{
+    background-color: #ccc;
+}
+#blog .container{
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+#blog .column{
+    flex-basis: 25%;
+}
