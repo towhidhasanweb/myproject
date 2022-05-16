@@ -219,6 +219,7 @@ font-size: 14px;
     flex-wrap: wrap;
     column-gap: 20px;
 }
-#blog .column{
-    flex-basis: 25%;
+
+#blog .column {
+    width: calc(25% - 20px);
 }
