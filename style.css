@@ -40,10 +40,11 @@ flex-basis: 110px;
     margin: 0;
     
 }
-.main-navigation .menu{
-    display: flex;
-    justify-content: flex-end;
+.menu-toggle svg{
+display: none;
 }
+
+
 
 .main-navigation li{
     line-height: 50px;
@@ -72,16 +73,7 @@ flex-basis: 110px;
     position: relative;
 
 }
-.main-navigation .sub-menu{
-    position: absolute;
-    background-color: #fff;
-    min-width: 220px;
-    z-index: 9;
-    box-shadow: 6px 6px 12px 0px rgb(0 0 0 / 50%);
-    top: 100%;
-    left: 0;
-    display: none;
-}
+
 .main-navigation li:hover .sub-menu{
     display: block;
 }
@@ -150,6 +142,7 @@ flex-basis: 110px;
 }
 #services .service-item{
     text-align: center;
+    margin: 10px;
 }
 #services .service-item .icon{
     width: 55px;
@@ -213,7 +206,7 @@ font-size: 14px;
 
 }
 #blog{
-    background-color: #ccc;
+    background-color: rgb(240, 240, 240);
 }
 #blog .container{
     flex-wrap: wrap;
@@ -222,4 +215,203 @@ font-size: 14px;
 
 #blog .column {
     width: calc(25% - 20px);
+}
+#blog .post{
+    background-color: rgb(247, 246, 246);
+    padding: 10px;
+}
+#blog .post .category{
+    margin-top: 5px;
+}
+#blog .post h2{
+font-size: 24px;
+text-align: left;
+line-height: 20px;
+}
+
+#blog .container .column:hover{
+    margin-top: -10px;
+    transition-duration: 0.5s;
+}
+.read-more{
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.black-btn{
+    background-color: #000;
+    display: inline-block;
+    color: #fff;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin-top: 30px;
+    text-align: center;
+    transition: padding 0.3s;
+    border: none;
+    outline: none;
+
+}
+.black-btn:hover{
+    padding: 15px 50px;
+}
+
+/* contact */
+#contact .contact-us{
+    max-width: 700px;
+    margin: 0 auto;
+}
+#contact form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea{
+border: none;
+outline: none;
+border-bottom: 1px solid #000;
+padding: 10px 5px;
+font-size: 16px;
+margin: 0 10px;
+}
+#contact .user-name{
+    flex-basis: calc(50% - 30px);
+}
+#contact .user-email{
+    flex-basis: calc(50% - 30px);
+}
+#contact textarea{
+    width: 100%;
+    min-height: 100px;
+    height: 120px;
+}
+#contact input[type='submit']{
+    display: table;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* contact end */
+.site-footer{
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+.site-footer .social-links svg{
+    width: 16px;
+    fill: rgb(208, 207, 207);
+}
+.site-footer .social-links{
+    text-align: center;
+}
+.site-footer .social-links a{
+    transition: transform 0.5s;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+    margin: 5px;
+}
+.site-footer .social-links a:hover{
+    transform: rotate(-360deg);
+}
+.copyright{
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+@media(min-width: 1024px){
+    .main-navigation .menu{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+    }
+    .main-navigation .sub-menu{
+        position: absolute;
+        background-color: #fff;
+        min-width: 220px;
+        z-index: 9;
+        box-shadow: 6px 6px 12px 0px rgb(0 0 0 / 50%);
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+}
+@media (max-width: 1023px){
+    #header .container{
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    .main-navigation{
+        display: none;
+    }
+    .main-navigation .sub-menu-toggle{
+        float: right;
+        width: 15px;
+    }
+    .menu-toggle svg{
+        width: 30px;
+        display: block;
+    }
+    .main-navigation li {
+        line-height: 40px;
+    }
+    .main-navigation .menu > li >a {
+        border-bottom: 1px solid #dedede;
+        display: block;
+        padding: 0px 10px;
+    }
+    .main-navigation ul li ul li{
+        border-bottom: 1px solid #dedede;
+        padding: 20px 20px;
+        display: block;
+    }
+    .about-text p {
+        font-size: 14px;
+        margin: 0;
+    }
+    
+}
+@media (max-width: 550px){
+    #home-top h1 {
+        font-size: 24px;
+    }
+    #home-top p {
+        font-size: 16px;
+        padding: 10px 7px;
+    }
+    #about .container {
+        display: block;
+       
+    }
+    #about .about-pic {
+        box-shadow: none;
+    }
+    .about-text {
+        padding: 10px;
+    }
+    #services .container{
+        display: block;
+    }
+    #portfolio .container{
+        display: block;
+    }
+    #blog .column {
+        width: 100%;
+    }
+    #contact .user-name, #contact .user-email, #contact textarea{
+        flex-basis: 100%;
+        margin: 0 10px;
+    }
+    #blog .post {
+        padding: 20px;
+        margin: 20px;
+    }
+    #portfolio .portfolio-item {
+        margin: 10px;
+    }
+    #services .service-item {
+        margin: 30px 10px;
+    }
 }
